@@ -5,7 +5,7 @@ export const newProduct = {
 }
 
 const productMocks = {
-    newProduct
+    newProduct,
 };
 
 export default productMocks;

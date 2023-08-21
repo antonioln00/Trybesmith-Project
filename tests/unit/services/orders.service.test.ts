@@ -1,17 +1,19 @@
-// import { expect } from 'chai';
-// import sinon from 'sinon';
-// import { findAllOrders } from '../../mocks/ordersMock';
-// import OrderModel from '../../../src/database/models/order.model';
-// import app from '../../../src/app';
+import chai, { expect } from 'chai';
+import sinon from 'sinon';
+import OrderModel from '../../../src/database/models/order.model';
+import app from '../../../src/app';
+import chaiHttp from 'chai-http';
 
-// describe('OrdersService', function () {
-//   beforeEach(function () { sinon.restore(); });
+chai.use(chaiHttp);
 
-//   it('Testa se é possível cadastrar um novo produto com sucesso', async function() {
-//     sinon.stub(OrderModel, 'findAll').resolves(findAllOrders);
+describe('OrdersService', function () {
+  beforeEach(function () { sinon.restore(); });
 
-//     const res = await chai.request(app).get('/orders').send();
-//     expect(res.status).to.equal(200);
-//   })
+  it('Testa se é possível cadastrar um novo produto com sucesso', async function() {
+    sinon.stub(OrderModel, 'findAll').resolves([]);
 
-// });
+    const res = await chai.request(app).get('/orders');
+
+    expect(res.status).to.equal(200);
+  })
+});
