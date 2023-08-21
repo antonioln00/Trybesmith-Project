@@ -12,7 +12,7 @@ Promise<{ status: number, message: string }> => {
 
   const getUser = await UserModel.findOne({ where: { username: user.username } });
 
-  if (!getUser || !bcrypt.hashSync(user.password, getUser.dataValues.password)) {
+  if (!getUser || !bcrypt.compareSync(user.password, getUser.dataValues.password)) {
     return { status: 401, message: 'Username or password invalid' };
   }
 
