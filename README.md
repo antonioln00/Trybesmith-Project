@@ -41,5 +41,6 @@ Se você deseja contribuir para o projeto Trybesmith ou tem sugestões de melhor
 
 Espero que o Trybesmith seja útil para sua jornada de aprendizado em desenvolvimento de API com Typescript. Divirta-se explorando e expandindo este projeto!
 
-Antonio Léo Neto
+
+Antonio Léo Neto <br>
 Desenvolvedor de Software
